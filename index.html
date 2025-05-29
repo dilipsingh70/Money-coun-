@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cash Counter</title>
+  <title>Dilip Cash Counter</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #e0f7fa, #fffde7);
@@ -24,8 +25,8 @@
       border-radius: 20px;
       padding: 30px 25px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      max-width: 400px;
       width: 100%;
+      max-width: 400px;
     }
 
     .row {
@@ -82,12 +83,27 @@
       background: linear-gradient(135deg, #004d40, #00796b);
     }
 
+    /* Mobile Responsive */
     @media (max-width: 500px) {
       .container {
         padding: 20px 15px;
+        max-width: 100%;
       }
+
+      .row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      label, span {
+        font-size: 16px;
+        width: 100%;
+        text-align: left;
+      }
+
       input[type="number"] {
-        width: 55px;
+        width: 100%;
       }
     }
   </style>
