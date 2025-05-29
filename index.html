@@ -17,14 +17,14 @@
       min-height: 100vh;
       padding: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      align-items: start;
     }
 
     .container {
       background: #ffffff;
       border-radius: 20px;
-      padding: 25px 20px;
+      padding: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 400px;
@@ -32,20 +32,20 @@
 
     .row {
       display: grid;
-      grid-template-columns: 1fr auto auto;
+      grid-template-columns: 1fr 80px 70px;
       gap: 10px;
       align-items: center;
       margin: 12px 0;
     }
 
     label {
-      font-size: 18px;
+      font-size: 16px;
       color: #333;
     }
 
     input[type="number"] {
-      width: 70px;
       padding: 8px;
+      width: 100%;
       border: none;
       border-radius: 10px;
       box-shadow: inset 2px 2px 5px #ccc, inset -2px -2px 5px #fff;
@@ -56,8 +56,8 @@
     span {
       font-weight: 600;
       color: #555;
-      min-width: 60px;
       text-align: right;
+      font-size: 16px;
     }
 
     .total {
@@ -85,15 +85,6 @@
 
     .btn:hover {
       background: linear-gradient(135deg, #004d40, #00796b);
-    }
-
-    @media (max-width: 400px) {
-      input[type="number"] {
-        width: 60px;
-      }
-      span {
-        font-size: 14px;
-      }
     }
   </style>
 </head>
@@ -132,7 +123,6 @@
     </div>
 
     <div class="total" id="cashTotal">Total: ₹0</div>
-
     <button class="btn" onclick="calculateTotal()">Count Total</button>
   </div>
 
